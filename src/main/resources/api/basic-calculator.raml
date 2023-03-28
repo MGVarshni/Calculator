@@ -1,0 +1,106 @@
+#%RAML 1.0
+title: Basic Calculator
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/2b70db82-8fb6-40a6-9923-2c67b032fb82
+/add:
+  description: Adds two numbers
+  post:
+    description: Returns the sum of two numbers
+    queryParameters:
+      num1:
+        displayName: Number 1
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      num2:
+        displayName: Number 2
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      operator:
+        type: string
+        required: true
+    responses:
+      200:
+        body:
+          application/json:
+            example: {"result": 10}
+
+/subtract:
+  description: Subtracts two numbers
+  post:
+    description: Returns the difference of two numbers
+    queryParameters:
+      num1:
+        displayName: Number 1
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      num2:
+        displayName: Number 2
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      operator:
+        type: string
+        required: true  
+    responses:
+      200:
+        body:
+          application/json:
+            example: {"result": 5}
+
+/multiply:
+  description: Multiplies two numbers
+  post:
+    description: Returns the product of two numbers
+    queryParameters:
+      num1:
+        displayName: Number 1
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      num2:
+        displayName: Number 2
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      operator:
+        type: string
+        required: true  
+    responses:
+      200:
+        body:
+          application/json:
+            example: {"result": 20}
+
+/divide:
+  description: Divides two numbers
+  post:
+    description: Returns the quotient of two numbers
+    queryParameters:
+      num1:
+        displayName: Number 1
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      num2:
+        displayName: Number 2
+        type: number
+        required: true
+        minimum: 1
+        maximum: 10
+      operator:
+        type: string
+        required: true  
+    responses:
+      200:
+        body:
+          application/json:
+            example: {"result": 2}
